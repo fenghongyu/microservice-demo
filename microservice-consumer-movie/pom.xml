@@ -38,10 +38,18 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- microservice-demo dependency begin-->
 		<dependency>
 			<groupId>com.microservice.common</groupId>
 			<artifactId>microservice-common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- microservice-demo dependency end-->
+
+		<!-- HttpClient -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
 		</dependency>
 
 	</dependencies>

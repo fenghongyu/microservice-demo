@@ -9,5 +9,4 @@ public class MicroserviceConsumerMovieApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MicroserviceConsumerMovieApplication.class, args);
 	}
-
 }
