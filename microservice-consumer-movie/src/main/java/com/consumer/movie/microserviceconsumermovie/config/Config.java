@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
  * @author fenghongyu
  */
 @Configuration
-public class config {
+public class Config {
 
     /**
      * 返回RestTemplate
