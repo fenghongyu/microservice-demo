@@ -20,7 +20,6 @@ public class config {
      */
     @Bean
     public RestTemplate restTemplate(ClientHttpRequestFactory factory){
-        //消息转换器，一般情况下可以省略，只需要添加相关依赖即可
         return new RestTemplate(factory);
     }
 
