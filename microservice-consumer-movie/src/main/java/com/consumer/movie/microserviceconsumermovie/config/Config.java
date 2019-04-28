@@ -2,7 +2,6 @@ package com.consumer.movie.microserviceconsumermovie.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
@@ -15,12 +14,11 @@ public class Config {
 
     /**
      * 返回RestTemplate
-     * @param factory
      * @return
      */
     @Bean
-    public RestTemplate restTemplate(ClientHttpRequestFactory factory){
-        return new RestTemplate(factory);
+    public RestTemplate restTemplate(){
+        return new RestTemplate();
     }
 
     /**

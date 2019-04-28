@@ -25,7 +25,6 @@ public class MovieController {
     @ResponseBody
     @GetMapping("/user/{userId}")
     public User queryUser(@PathVariable Long userId){
-        String url = "http://127.0.0.1:8000/user/" + userId;
-        return restTemplate.getForObject(url, User.class);
+        return this.restTemplate.getForObject("http://microservice-provider-user/user/"+userId,User.class);
     }
 }
