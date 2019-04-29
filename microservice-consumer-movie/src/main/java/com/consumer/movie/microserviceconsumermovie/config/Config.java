@@ -5,6 +5,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
+import com.netflix.loadbalancer.IRule;
+import com.netflix.loadbalancer.RandomRule;
+
 /**
  * Created on 2019-04-26
  * @author fenghongyu
@@ -32,5 +35,10 @@ public class Config {
         requestFactory.setReadTimeout(5000);
         requestFactory.setConnectTimeout(5000);
         return requestFactory;
+    }
+
+    @Bean
+    public IRule getIRule() {
+        return new RandomRule();
     }
 }
