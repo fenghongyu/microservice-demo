@@ -10,6 +10,7 @@ import com.common.entity.User;
  * Created on 2019-04-29
  * @author fenghongyu
  */
+//@FeignClient(name = "microservice-provider-user", fallback = UserFeignClientFallBack.class)
 @FeignClient(name = "microservice-provider-user")
 public interface UserFeignClient {
 
