@@ -34,7 +34,7 @@ public class MovieController {
     @ResponseBody
     @GetMapping("/userInstance")
     public String queryUserInstance() {
-        ServiceInstance serviceInstance = this.loadBalancerClient.choose("microservice-provider-user");
+        ServiceInstance serviceInstance = loadBalancerClient.choose("microservice-provider-user");
         return serviceInstance.getServiceId()+" ; "+serviceInstance.getHost()+" ; "+serviceInstance.getPort();
     }
 }
