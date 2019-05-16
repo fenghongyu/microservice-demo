@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 
 import com.netflix.loadbalancer.IRule;
-import com.netflix.loadbalancer.RandomRule;
+import com.netflix.loadbalancer.RoundRobinRule;
 
 /**
  * Created on 2019-04-26
@@ -13,15 +13,6 @@ import com.netflix.loadbalancer.RandomRule;
  */
 @Configuration
 public class Config {
-
-    /**
-     * 返回RestTemplate
-     * @return
-     */
-//    @Bean
-//    public RestTemplate restTemplate(){
-//        return new RestTemplate();
-//    }
 
     /**
      * ClientHttpRequestFactory接口的第一种实现方式，即：
@@ -38,6 +29,6 @@ public class Config {
 
     @Bean
     public IRule getIRule() {
-        return new RandomRule();
+        return new RoundRobinRule();
     }
 }
