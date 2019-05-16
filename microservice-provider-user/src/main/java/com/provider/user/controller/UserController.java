@@ -19,6 +19,7 @@ public class UserController {
 
     @GetMapping("/{userId}")
     public User findById(@PathVariable Long userId) {
+        System.out.println("-------请求的user");
         return getUser(userId);
     }
 
